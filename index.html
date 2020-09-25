@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Snow_fall</title>
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+<style type="text/css">
+	body{
+		background-color: black;
+                                   background-image: url(x.jpg);
+			background-repeat: repeat;
+	}
+
+
+	.fa-snowflake{
+		animation: fall 3s linear forwards;
+		color: white;
+		position: absolute;
+		
+	}
+	@keyframes fall{
+		from{
+			top: 0px;
+			transform: rotate(0deg);
+			
+		}		
+		to{
+			top:552px;
+			transform: rotate(360deg);
+
+		}
+	}
+
+
+
+</style>
+</head>
+
+
+
+<body>
+
+
+<div class="social-panel-container">
+	<div class="social-panel">
+		<i class="fas fa-snowflake"></i>
+	</div>
+</div>
+
+<script>
+		
+	
+
+	function snow(){
+
+	const snow_flake = document.createElement('i');
+	snow_flake.classList.add('fas');
+	snow_flake.classList.add('fa-snowflake');
+	snow_flake.style.left = Math.random() * window.innerWidth + 'px';
+	snow_flake.style.animationDuration = Math.random() * 3 + 2 + 's'; 
+	snow_flake.style.opacity = Math.random();
+	
+	snow_flake.style.fontSize = Math.random() * 10 + 10 + 'px';
+	
+	document.body.appendChild(snow_flake);
+
+	setTimeout(()=>{
+		snow_flake.remove();
+	},2500)
+	
+}
+
+
+
+setInterval(snow,10);
+
+
+</script>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
